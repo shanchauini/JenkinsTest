@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import java.util.Calendar;
 import java.util.Date;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class TestZipArchiveEntryJunit {
     private static ZipArchiveEntry Jentry;
 
@@ -21,7 +24,8 @@ public class TestZipArchiveEntryJunit {
     @Tag("test_Entry")
     public void TestSize() {
         Jentry.setSize(0);
-        assert Jentry.getSize() == 0;
+        //assert Jentry.getSize() == 0;
+        assertEquals(0,Jentry.getSize());
     }
 
     //测试目录最新更新时间是否正确
@@ -34,7 +38,8 @@ public class TestZipArchiveEntryJunit {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
 
-        assert cal.get(Calendar.YEAR) == 2025;
+        //assert cal.get(Calendar.YEAR) == 2025;
+        assertEquals(cal.get(Calendar.YEAR),2025);
     }
 
     //测试目录判断是否正确
@@ -42,7 +47,8 @@ public class TestZipArchiveEntryJunit {
     @Test
     @Tag("test_Entry")
     public void TestIsDirectory() {
-        assert Jentry.isDirectory();
+        //assert Jentry.isDirectory();
+        assertTrue(Jentry.isDirectory());
     }
 
      private Date createDate(int year, int month, int day) {
