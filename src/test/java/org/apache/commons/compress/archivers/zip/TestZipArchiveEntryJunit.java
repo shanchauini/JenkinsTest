@@ -16,16 +16,18 @@ public class TestZipArchiveEntryJunit {
     }
 
     //测试目录大小设置是否正确
-    @Tag("test_Entry")
+
     @Test
+    @Tag("test_Entry")
     public void TestSize() {
         Jentry.setSize(0);
         assert Jentry.getSize() == 0;
     }
 
     //测试目录最新更新时间是否正确
-    @Tag("test_Entry")
+
     @Test
+    @Tag("test_Entry")
     public void TestGetLastModified() {
         Jentry.setTime(createDate(2025,1,1).getTime());
         Date date = Jentry.getLastModifiedDate();
@@ -36,8 +38,9 @@ public class TestZipArchiveEntryJunit {
     }
 
     //测试目录判断是否正确
-    @Tag("test_Entry")
+
     @Test
+    @Tag("test_Entry")
     public void TestIsDirectory() {
         assert Jentry.isDirectory();
     }

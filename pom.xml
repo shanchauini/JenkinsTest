@@ -67,9 +67,9 @@
                         <include>**/*Test.java</include>
                         <include>**/org/apache/commons/compress/archivers/zip/*.java</include> <!-- 显式包含 -->
                     </includes>
-                    <groups>test_Entry</groups>  <!-- 执行指定 Tag 的测试 -->
+                   <!-- <groups>test_Entry</groups> --> <!-- 执行指定 Tag 的测试 -->
                 </configuration>
-                
+
 
             </plugin>
         </plugins>
